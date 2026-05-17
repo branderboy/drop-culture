@@ -143,13 +143,13 @@
 
       <!-- Navigation -->
       <nav class="relative z-20 flex justify-end items-center px-6 md:px-12 py-4">
-        <button class="text-sm font-bold uppercase tracking-widest border border-white/30 px-6 py-2 hover:bg-white hover:text-black transition-colors">
+        <a href="#rsvp" class="text-sm font-bold uppercase tracking-widest border border-white/30 px-6 py-2 hover:bg-white hover:text-black transition-colors">
           RSVP
-        </button>
+        </a>
       </nav>
 
       <!-- Main Content -->
-      <div class="relative z-10 px-6 md:px-12 max-w-7xl mx-auto w-full pt-4 pb-24 md:pb-32">
+      <div class="relative z-10 px-6 md:px-12 max-w-7xl mx-auto w-full pt-4 pb-40 md:pb-48">
         <div class="max-w-3xl mx-auto text-center relative z-20 animate-hero-enter">
           <!-- LOGO -->
           <div class="mb-4 w-full flex justify-center relative">
@@ -175,14 +175,14 @@
             Every Friday, creators, tastemakers, and locals gather to experience what's next <span class="text-white border-b border-[#C28B1E] font-bold">before the internet catches on.</span>
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button class="bg-white text-black font-bold uppercase tracking-widest px-8 py-4 flex items-center justify-center gap-2 hover:bg-[#C28B1E] hover:text-white transition-all shadow-lg group">
-              Request Access
+          <div class="flex flex-col items-center gap-3">
+            <a href="#rsvp" class="bg-[#C28B1E] text-black font-bold uppercase tracking-widest px-10 py-4 flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-all shadow-lg group">
+              RSVP — Request Access
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-[18px] h-[18px] transform group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </button>
-            <button class="border border-white/30 text-white font-bold uppercase tracking-widest px-8 py-4 flex items-center justify-center gap-2 hover:bg-white/10 transition-all">
-              Apply To Drop
-            </button>
+            </a>
+            <a href="#apply" class="text-sm font-bold uppercase tracking-widest text-white/80 border-b border-white/40 hover:text-[#C28B1E] hover:border-[#C28B1E] transition-colors pb-0.5">
+              Submit Your Drop →
+            </a>
           </div>
         </div>
       </div>
@@ -482,12 +482,12 @@
     </section>
 
     <!-- ==================== FORMS ==================== -->
-    <section class="py-24 md:py-32 px-6 bg-[#F9F9F6]">
+    <section id="forms" class="py-24 md:py-32 px-6 bg-[#F9F9F6]">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-stretch">
 
           <!-- Apply To Drop Form -->
-          <div class="fade-in h-full">
+          <div id="apply" class="fade-in h-full scroll-mt-24">
             <div class="bg-white p-8 md:p-12 border border-gray-200 shadow-xl relative h-full flex flex-col">
               <div class="absolute top-0 right-0 bg-black text-white text-xs font-bold uppercase tracking-widest px-4 py-2">Creator</div>
               <h2 class="text-3xl font-black uppercase tracking-tighter mb-2">Apply To Drop</h2>
@@ -576,7 +576,7 @@
           </div>
 
           <!-- Request Access Form -->
-          <div class="fade-in h-full" style="transition-delay: 0.2s;">
+          <div id="rsvp" class="fade-in h-full scroll-mt-24" style="transition-delay: 0.2s;">
             <div class="bg-white p-8 md:p-12 border border-gray-200 shadow-xl relative h-full flex flex-col">
               <div class="absolute top-0 right-0 bg-[#C28B1E] text-black text-xs font-bold uppercase tracking-widest px-4 py-2">Attendee / Contributor</div>
               <h2 class="text-3xl font-black uppercase tracking-tighter mb-2">Get In The Room</h2>
