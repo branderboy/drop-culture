@@ -130,11 +130,13 @@
             <span class="text-gray-300">Doors Open 6PM</span>
           </div>
           <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-gray-300">
-            <span class="text-[#C28B1E]">📍 The Culture House NYC</span>
-            <span class="hidden md:inline text-white/30">/</span>
-            <span>Rooftop + Indoor Lounge</span>
+            <span class="text-[#C28B1E]">📍 Rooftop + Indoor Lounge</span>
             <span class="hidden md:inline text-white/30">/</span>
             <span>New York City</span>
+          </div>
+          <div class="flex items-center gap-2 text-white">
+            <span class="text-[10px] md:text-[11px] text-gray-400 font-bold tracking-widest">Doors In</span>
+            <span id="hero-countdown" class="text-[#C28B1E] font-mono text-xs md:text-sm tabular-nums">-- : -- : -- : --</span>
           </div>
         </div>
       </div>
@@ -148,38 +150,34 @@
 
       <!-- Main Content -->
       <div class="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 max-w-7xl mx-auto w-full pt-10 pb-8">
-        <div class="max-w-3xl relative z-20 animate-hero-enter">
-          <p class="text-white font-bold tracking-[0.2em] uppercase text-sm mb-8 flex items-center gap-3">
-            <span class="w-8 h-[2px] bg-[#C28B1E]"></span> The Culture House NYC
-          </p>
-          
+        <div class="max-w-3xl mx-auto text-center relative z-20 animate-hero-enter">
           <!-- LOGO -->
-          <div class="mb-10 w-full flex justify-start relative">
+          <div class="mb-10 w-full flex justify-center relative">
              <!-- Soft glow behind logo so black text is visible on dark background -->
-             <div class="absolute top-1/2 left-0 -translate-y-1/2 w-3/4 h-full bg-white opacity-40 blur-[70px] rounded-full pointer-events-none"></div>
-             
-             <img src="logo-club.png" alt="Drop Culture Fridays Logo" class="relative z-10 object-contain drop-shadow-2xl h-40 md:h-64 lg:h-[300px] -ml-2" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';" />
-             
+             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-full bg-white opacity-40 blur-[70px] rounded-full pointer-events-none"></div>
+
+             <img src="logo-club.png" alt="Drop Culture Fridays Logo" class="relative z-10 object-contain drop-shadow-2xl h-40 md:h-64 lg:h-[300px]" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';" />
+
              <!-- Fallback Logo Details (Triggers if logo.png is missing) -->
-             <div id="logo-fallback" style="display: none;" class="relative z-10 flex-col items-center justify-center font-black uppercase tracking-tighter leading-[0.85] h-40 md:h-64 lg:h-[300px] select-none -ml-2">
+             <div id="logo-fallback" style="display: none;" class="relative z-10 flex-col items-center justify-center font-black uppercase tracking-tighter leading-[0.85] h-40 md:h-64 lg:h-[300px] select-none">
                 <span class="text-[#C28B1E] text-5xl md:text-7xl mb-2">👑</span>
                 <span class="text-5xl md:text-7xl text-white">DROP</span>
                 <span class="text-5xl md:text-7xl text-white">CULTURE</span>
                 <span class="text-2xl md:text-4xl text-white mt-2" style="font-family: 'brush', sans-serif">Fridays</span>
              </div>
           </div>
-          
-          <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter leading-tight mb-6 max-w-xl text-white">
+
+          <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter leading-tight mb-6 max-w-xl mx-auto text-white">
             10 Drops. One Friday. <span class="text-white">The City Decides.</span>
           </h2>
-          
-          <p class="text-lg md:text-xl max-w-xl text-gray-300 font-medium mb-10 leading-relaxed">
+
+          <p class="text-lg md:text-xl max-w-xl mx-auto text-gray-300 font-medium mb-10 leading-relaxed">
             Every Friday, creators, tastemakers, and locals gather to experience what's next <span class="text-white border-b border-[#C28B1E] font-bold">before the internet catches on.</span>
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 mb-12 md:mb-20">
+          <div class="flex flex-col sm:flex-row gap-4 mb-12 md:mb-20 justify-center">
             <button class="bg-white text-black font-bold uppercase tracking-widest px-8 py-4 flex items-center justify-center gap-2 hover:bg-[#C28B1E] hover:text-white transition-all shadow-lg group">
-              Request Access 
+              Request Access
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-[18px] h-[18px] transform group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </button>
             <button class="border border-white/30 text-white font-bold uppercase tracking-widest px-8 py-4 flex items-center justify-center gap-2 hover:bg-white/10 transition-all">
@@ -483,8 +481,21 @@
             <div class="bg-white p-8 md:p-12 border border-gray-200 shadow-xl relative">
               <div class="absolute top-0 right-0 bg-black text-white text-xs font-bold uppercase tracking-widest px-4 py-2">Creator</div>
               <h2 class="text-3xl font-black uppercase tracking-tighter mb-2">Apply To Drop</h2>
-              <p class="text-gray-500 font-medium mb-10">Only 10 drops selected weekly.</p>
-              
+              <p class="text-gray-500 font-medium mb-6">Only 10 drops selected weekly.</p>
+
+              <!-- Social Proof (Creators) -->
+              <div class="flex items-center gap-3 mb-8 border-l-2 border-[#C28B1E] pl-3">
+                <div class="flex -space-x-2">
+                  <div class="w-6 h-6 rounded-full bg-gradient-to-br from-pink-400 to-purple-600 border-2 border-white"></div>
+                  <div class="w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-orange-600 border-2 border-white"></div>
+                  <div class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-indigo-700 border-2 border-white"></div>
+                </div>
+                <div class="text-[11px] uppercase tracking-wider text-gray-600 font-bold">
+                  <span id="apply-social-proof">@kairo.sound just applied · 1m ago</span><br/>
+                  <span class="text-[#C28B1E]"><span id="apply-count">147</span> applications this week</span>
+                </div>
+              </div>
+
               <form class="space-y-6">
                 <div class="grid grid-cols-2 gap-6">
                   <div class="space-y-1">
@@ -496,7 +507,7 @@
                     <input type="text" class="w-full border-b border-gray-300 py-2 bg-transparent focus:outline-none focus:border-black transition-colors" />
                   </div>
                 </div>
-                
+
                 <div class="space-y-1">
                   <label class="text-xs font-bold uppercase tracking-wider text-gray-400">Category</label>
                   <select class="w-full border-b border-gray-300 py-2 bg-transparent focus:outline-none focus:border-black transition-colors text-black">
@@ -514,13 +525,46 @@
                 </div>
 
                 <div class="space-y-1">
-                  <label class="text-xs font-bold uppercase tracking-wider text-gray-400">Link (Unreleased/Demo/Deck)</label>
+                  <label class="text-xs font-bold uppercase tracking-wider text-gray-400">Product Pitch (Video / Music Link)</label>
+                  <input type="url" placeholder="YouTube, Vimeo, Spotify, SoundCloud..." class="w-full border-b border-gray-300 py-2 bg-transparent focus:outline-none focus:border-black transition-colors" />
+                </div>
+
+                <div class="space-y-1">
+                  <label class="text-xs font-bold uppercase tracking-wider text-gray-400">Deck / Demo Link (Optional)</label>
                   <input type="url" class="w-full border-b border-gray-300 py-2 bg-transparent focus:outline-none focus:border-black transition-colors" />
                 </div>
+
+                <!-- Jump The Line (Creators) -->
+                <label class="flex items-start gap-3 pt-2 cursor-pointer group">
+                  <input type="checkbox" class="mt-1 w-4 h-4 accent-[#C28B1E]" />
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between flex-wrap gap-2">
+                      <span class="text-sm font-black uppercase tracking-wide text-black group-hover:text-[#C28B1E] transition-colors">Jump The Line · Priority Review</span>
+                      <span class="text-sm font-black text-[#C28B1E]">+$50</span>
+                    </div>
+                    <p class="text-xs text-gray-500 font-medium mt-1">Skip the queue. Top of the curator's stack within 24h.</p>
+                  </div>
+                </label>
 
                 <button type="button" class="w-full bg-black text-white font-bold uppercase tracking-widest py-4 mt-8 hover:bg-[#C28B1E] transition-colors">
                   Submit Application
                 </button>
+
+                <!-- Share -->
+                <div class="pt-6 border-t border-gray-100 flex items-center justify-between flex-wrap gap-3">
+                  <span class="text-[10px] uppercase tracking-widest font-bold text-gray-400">Share This Drop Call</span>
+                  <div class="flex gap-2">
+                    <a href="https://twitter.com/intent/tweet?text=Applying%20to%20drop%20at%20Drop%20Culture%20Fridays%20NYC%20%F0%9F%91%91&url=https%3A%2F%2Fdropculturefridays.com" target="_blank" rel="noopener" aria-label="Share on X" class="w-8 h-8 border border-gray-200 hover:border-black hover:bg-black hover:text-white flex items-center justify-center text-gray-600 transition-colors">
+                      <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M18.244 2H21.5l-7.51 8.583L23 22h-6.86l-5.37-7.02L4.6 22H1.34l8.04-9.187L1 2h7.03l4.85 6.41L18.244 2zm-1.2 18h1.9L7.03 4H5.04l12.005 16z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdropculturefridays.com" target="_blank" rel="noopener" aria-label="Share on Facebook" class="w-8 h-8 border border-gray-200 hover:border-black hover:bg-black hover:text-white flex items-center justify-center text-gray-600 transition-colors">
+                      <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+                    </a>
+                    <button type="button" data-share-copy class="w-8 h-8 border border-gray-200 hover:border-black hover:bg-black hover:text-white flex items-center justify-center text-gray-600 transition-colors" aria-label="Copy link">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3.5 h-3.5"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.72M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                    </button>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
@@ -530,14 +574,44 @@
             <div class="bg-[#111] text-white p-8 md:p-12 border border-black shadow-2xl relative">
               <div class="absolute top-0 right-0 bg-[#C28B1E] text-black text-xs font-bold uppercase tracking-widest px-4 py-2">Attendee</div>
               <h2 class="text-3xl font-black uppercase tracking-tighter mb-2">Get In The Room</h2>
-              <p class="text-gray-400 font-medium mb-10">Capacity is limited. Access is curated weekly.</p>
-              
+              <p class="text-gray-400 font-medium mb-8">Capacity is limited. Access is curated weekly.</p>
+
+              <!-- Event Details + Add to Calendar -->
+              <div class="border border-white/10 bg-white/[0.03] p-5 mb-6">
+                <p class="text-[10px] font-bold uppercase tracking-widest text-[#C28B1E] mb-3">Next Drop</p>
+                <div class="space-y-1.5 text-sm">
+                  <div class="flex items-center gap-2 font-bold"><span class="text-[#C28B1E]">📅</span> <span id="next-friday-date" class="text-white">Friday</span></div>
+                  <div class="flex items-center gap-2 text-gray-300"><span class="text-[#C28B1E]">🕕</span> Doors 6PM · Drops 7PM</div>
+                  <div class="flex items-center gap-2 text-gray-300"><span class="text-[#C28B1E]">📍</span> The Culture House NYC · Rooftop + Indoor Lounge</div>
+                </div>
+                <div class="flex items-center justify-between gap-3 mt-4 pt-4 border-t border-white/10">
+                  <span class="font-mono text-[11px] uppercase tracking-widest text-gray-400">Doors In <span id="rsvp-countdown" class="text-[#C28B1E]">--</span></span>
+                  <a id="add-to-calendar" href="#" target="_blank" rel="noopener" class="text-[10px] font-bold uppercase tracking-widest border border-[#C28B1E] text-[#C28B1E] px-3 py-2 hover:bg-[#C28B1E] hover:text-black transition-colors flex items-center gap-1.5">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3 h-3"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Add to Calendar
+                  </a>
+                </div>
+              </div>
+
+              <!-- Social Proof (Attendees) -->
+              <div class="flex items-center gap-3 mb-6 border-l-2 border-[#C28B1E] pl-3">
+                <div class="flex -space-x-2">
+                  <div class="w-6 h-6 rounded-full bg-gradient-to-br from-rose-400 to-red-700 border-2 border-[#111]"></div>
+                  <div class="w-6 h-6 rounded-full bg-gradient-to-br from-emerald-400 to-teal-700 border-2 border-[#111]"></div>
+                  <div class="w-6 h-6 rounded-full bg-gradient-to-br from-amber-400 to-yellow-700 border-2 border-[#111]"></div>
+                </div>
+                <div class="text-[11px] uppercase tracking-wider text-gray-300 font-bold">
+                  <span id="rsvp-social-proof">@nico.day just requested access · 2m ago</span><br/>
+                  <span class="text-[#C28B1E]"><span id="rsvp-count">312</span> requests this week · waitlist active</span>
+                </div>
+              </div>
+
               <form class="space-y-6">
                 <div class="space-y-1">
                   <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Full Name</label>
                   <input type="text" class="w-full border-b border-white/20 py-2 bg-transparent text-white focus:outline-none focus:border-[#C28B1E] transition-colors" />
                 </div>
-                
+
                 <div class="space-y-1">
                   <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Email Address</label>
                   <input type="email" class="w-full border-b border-white/20 py-2 bg-transparent text-white focus:outline-none focus:border-[#C28B1E] transition-colors" />
@@ -562,9 +636,37 @@
                   </div>
                 </div>
 
+                <!-- Jump The Line (Attendees) -->
+                <label class="flex items-start gap-3 pt-2 cursor-pointer group">
+                  <input type="checkbox" class="mt-1 w-4 h-4 accent-[#C28B1E]" />
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between flex-wrap gap-2">
+                      <span class="text-sm font-black uppercase tracking-wide text-white group-hover:text-[#C28B1E] transition-colors">Jump The Line · Confirmed Spot</span>
+                      <span class="text-sm font-black text-[#C28B1E]">+$35</span>
+                    </div>
+                    <p class="text-xs text-gray-400 font-medium mt-1">Skip the waitlist. Guaranteed entry + early door access.</p>
+                  </div>
+                </label>
+
                 <button type="button" class="w-full bg-white text-black font-bold uppercase tracking-widest py-4 mt-8 hover:bg-[#C28B1E] hover:text-white transition-colors">
                   Request Access
                 </button>
+
+                <!-- Share -->
+                <div class="pt-6 border-t border-white/10 flex items-center justify-between flex-wrap gap-3">
+                  <span class="text-[10px] uppercase tracking-widest font-bold text-gray-500">Share This Friday</span>
+                  <div class="flex gap-2">
+                    <a href="https://twitter.com/intent/tweet?text=I%27m%20pulling%20up%20to%20Drop%20Culture%20Fridays%20NYC%20%F0%9F%91%91&url=https%3A%2F%2Fdropculturefridays.com" target="_blank" rel="noopener" aria-label="Share on X" class="w-8 h-8 border border-white/20 hover:border-[#C28B1E] hover:bg-[#C28B1E] hover:text-black flex items-center justify-center text-gray-300 transition-colors">
+                      <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M18.244 2H21.5l-7.51 8.583L23 22h-6.86l-5.37-7.02L4.6 22H1.34l8.04-9.187L1 2h7.03l4.85 6.41L18.244 2zm-1.2 18h1.9L7.03 4H5.04l12.005 16z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdropculturefridays.com" target="_blank" rel="noopener" aria-label="Share on Facebook" class="w-8 h-8 border border-white/20 hover:border-[#C28B1E] hover:bg-[#C28B1E] hover:text-black flex items-center justify-center text-gray-300 transition-colors">
+                      <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+                    </a>
+                    <button type="button" data-share-copy class="w-8 h-8 border border-white/20 hover:border-[#C28B1E] hover:bg-[#C28B1E] hover:text-black flex items-center justify-center text-gray-300 transition-colors" aria-label="Copy link">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3.5 h-3.5"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.72M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                    </button>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
@@ -682,6 +784,110 @@
       } else {
         stickyCta.classList.remove('is-visible');
       }
+    });
+
+    // 3. Next Friday 6PM helpers
+    function nextFridayDoors() {
+      const now = new Date();
+      const target = new Date(now);
+      let days = (5 - now.getDay() + 7) % 7;
+      target.setDate(now.getDate() + days);
+      target.setHours(18, 0, 0, 0);
+      if (target <= now) target.setDate(target.getDate() + 7);
+      return target;
+    }
+
+    // 4. Countdown (hero bar + RSVP card)
+    const heroCd = document.getElementById('hero-countdown');
+    const rsvpCd = document.getElementById('rsvp-countdown');
+    function updateCountdown() {
+      const diff = nextFridayDoors() - new Date();
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      const pad = n => String(n).padStart(2, '0');
+      if (heroCd) heroCd.textContent = `${pad(d)} : ${pad(h)} : ${pad(m)} : ${pad(s)}`;
+      if (rsvpCd) rsvpCd.textContent = `${d}D ${pad(h)}H ${pad(m)}M`;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // 5. Next Friday human date
+    const nextDate = document.getElementById('next-friday-date');
+    if (nextDate) {
+      const f = nextFridayDoors();
+      nextDate.textContent = f.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+    }
+
+    // 6. Add to Calendar (Google Calendar template URL)
+    const addCal = document.getElementById('add-to-calendar');
+    if (addCal) {
+      const start = nextFridayDoors();
+      const end = new Date(start);
+      end.setHours(23, 59, 0, 0);
+      const fmt = d => d.toISOString().replace(/[-:]|\.\d{3}/g, '');
+      const params = new URLSearchParams({
+        action: 'TEMPLATE',
+        text: 'Drop Culture Fridays · NYC',
+        dates: `${fmt(start)}/${fmt(end)}`,
+        details: 'Doors 6PM · Drops 7PM. 10 Drops. One Friday. The City Decides.',
+        location: 'The Culture House NYC'
+      });
+      addCal.href = `https://calendar.google.com/calendar/render?${params.toString()}`;
+    }
+
+    // 7. Fake social proof rotation
+    const applyNames = [
+      '@kairo.sound', '@meliblu', '@jaxon.films', '@nyx.wears', '@odessa.btw',
+      '@finn.builds', '@rio.tape', '@sable.studio', '@tomi.codes', '@vela.beats'
+    ];
+    const rsvpNames = [
+      '@nico.day', '@cleo.runs', '@theo.eats', '@lila.mode', '@kai.from.bk',
+      '@ari.nyc', '@josi.gram', '@dre.uptown', '@mira.lives', '@beck.in.soho'
+    ];
+    const verbsApply = ['just applied', 'submitted a drop', 'pitched their music', 'pitched a product'];
+    const verbsRsvp = ['just requested access', 'joined the waitlist', 'jumped the line', 'confirmed for Friday'];
+
+    function rotateProof(elId, names, verbs) {
+      const el = document.getElementById(elId);
+      if (!el) return;
+      const tick = () => {
+        const n = names[Math.floor(Math.random() * names.length)];
+        const v = verbs[Math.floor(Math.random() * verbs.length)];
+        const t = Math.floor(Math.random() * 12) + 1;
+        el.textContent = `${n} ${v} · ${t}m ago`;
+      };
+      setInterval(tick, 4500);
+    }
+    rotateProof('apply-social-proof', applyNames, verbsApply);
+    rotateProof('rsvp-social-proof', rsvpNames, verbsRsvp);
+
+    // Slowly tick up the counters
+    function tickCount(id, base) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      let n = base;
+      setInterval(() => {
+        if (Math.random() < 0.4) {
+          n += 1;
+          el.textContent = n;
+        }
+      }, 7000);
+    }
+    tickCount('apply-count', 147);
+    tickCount('rsvp-count', 312);
+
+    // 8. Share - Copy link
+    document.querySelectorAll('[data-share-copy]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          const original = btn.innerHTML;
+          btn.innerHTML = '<span class="text-[10px] font-bold">✓</span>';
+          setTimeout(() => { btn.innerHTML = original; }, 1500);
+        } catch (e) {}
+      });
     });
   </script>
 </body>
