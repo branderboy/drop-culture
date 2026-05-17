@@ -99,9 +99,10 @@
     }
 
     .grain-overlay {
-      background: linear-gradient(rgba(0,0,0,0.2), rgba(17,17,17,0.75)), url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=2070&auto=format&fit=crop');
+      background: linear-gradient(rgba(0,0,0,0.2), rgba(17,17,17,0.75)), url('eventphoto.png');
       background-size: cover;
       background-position: center;
+      filter: grayscale(1);
     }
 
     /* Custom Scrollbar */
@@ -149,10 +150,10 @@
       </nav>
 
       <!-- Main Content -->
-      <div class="relative z-10 px-6 md:px-12 max-w-7xl mx-auto w-full pt-4 pb-6 md:pb-8">
+      <div class="relative z-10 px-6 md:px-12 max-w-7xl mx-auto w-full pt-0 pb-6 md:pb-8">
         <div class="max-w-3xl mx-auto text-center relative z-20 animate-hero-enter">
           <!-- LOGO -->
-          <div class="mb-4 w-full flex justify-center relative">
+          <div class="-mt-4 mb-4 w-full flex justify-center relative">
              <!-- Soft glow behind logo so black text is visible on dark background -->
              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-full bg-white opacity-40 blur-[70px] rounded-full pointer-events-none"></div>
 
@@ -226,7 +227,7 @@
     </div>
 
     <!-- ==================== WHAT IS SECTION ==================== -->
-    <section class="pt-6 md:pt-8 pb-24 md:pb-32 bg-[#111] text-white overflow-hidden">
+    <section class="pt-16 md:pt-24 pb-24 md:pb-32 bg-[#111] text-white overflow-hidden">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center md:gap-0">
         <div class="fade-in px-6 md:pl-12 md:pr-0 md:ml-auto md:max-w-xl">
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter leading-tight mb-8 text-left">
@@ -319,7 +320,7 @@
       <div class="absolute bottom-0 left-[-10%] w-[500px] h-[500px] bg-[#0A3B82] opacity-[0.04] rounded-full blur-[100px] pointer-events-none"></div>
       
       <!-- Giant Faint Watermark -->
-      <div class="absolute top-1/2 right-0 translate-x-1/3 -translate-y-1/2 rotate-90 text-[10rem] md:text-[14rem] font-black uppercase tracking-tighter whitespace-nowrap pointer-events-none select-none leading-none" style="-webkit-text-stroke: 2px #C28B1E; color: transparent; opacity: 0.35;">
+      <div class="absolute top-1/2 right-0 translate-x-1/3 -translate-y-1/2 rotate-90 text-[10rem] md:text-[14rem] font-black uppercase tracking-tighter whitespace-nowrap pointer-events-none select-none leading-none" style="color: #C28B1E; opacity: 0.18;">
         THE FRIDAY
       </div>
 
@@ -450,7 +451,7 @@
         <div class="w-full md:w-1/2 grid grid-cols-2 gap-4 relative z-10">
           <div class="col-span-2 fade-in" style="transition-delay: 0.2s;">
             <button type="button" class="block w-full aspect-video bg-gray-900 overflow-hidden relative group border border-white/10 cursor-pointer">
-              <img src="eventphoto.png" alt="Drop Culture Fridays Live at The Culture House NYC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" style="filter: sepia(0.35) contrast(1.1) saturate(0.8) brightness(0.95);" />
+              <img src="eventphoto.png" alt="Drop Culture Fridays Live at The Culture House NYC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" style="filter: grayscale(1) contrast(1.1) brightness(0.95);" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-[#C28B1E]/10 mix-blend-multiply"></div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
@@ -468,12 +469,12 @@
             </button>
           </div>
           <div class="fade-in relative overflow-hidden border border-white/10" style="transition-delay: 0.3s;">
-            <img src="events1.png" alt="Line outside Culture House NYC" class="w-full aspect-square object-cover" style="filter: sepia(0.35) contrast(1.1) saturate(0.8) brightness(0.95);" />
+            <img src="events1.png" alt="Line outside Culture House NYC" class="w-full aspect-square object-cover" style="filter: grayscale(1) contrast(1.1) brightness(0.95);" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-[#C28B1E]/10 mix-blend-multiply pointer-events-none"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
           </div>
           <div class="fade-in relative overflow-hidden border border-white/10" style="transition-delay: 0.4s;">
-            <img src="behind-the-scenes.png" alt="Behind the scenes at Drop Culture Fridays" class="w-full aspect-square object-cover" style="filter: sepia(0.35) contrast(1.1) saturate(0.8) brightness(0.95);" />
+            <img src="behind-the-scenes.png" alt="Behind the scenes at Drop Culture Fridays" class="w-full aspect-square object-cover" style="filter: grayscale(1) contrast(1.1) brightness(0.95);" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-[#C28B1E]/10 mix-blend-multiply pointer-events-none"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
           </div>
@@ -600,7 +601,10 @@
                   </div>
                 </div>
                 <div class="flex items-center justify-between gap-3 mt-4 pt-4 border-t border-gray-200">
-                  <span class="font-mono text-[11px] uppercase tracking-widest text-gray-500">Doors In <span id="rsvp-countdown" class="text-black font-bold">--</span></span>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Doors In</span>
+                    <span id="rsvp-countdown" class="text-base md:text-lg font-black text-black tabular-nums tracking-tight">--</span>
+                  </div>
                   <a id="add-to-calendar" href="#" target="_blank" rel="noopener" class="text-[10px] font-bold uppercase tracking-widest text-black border-b border-black hover:text-[#C28B1E] hover:border-[#C28B1E] transition-colors">
                     Add to Calendar →
                   </a>
@@ -688,25 +692,25 @@
     <section class="bg-[#111] py-2">
        <div class="flex flex-wrap md:flex-nowrap w-full overflow-hidden">
          <div class="w-1/2 md:w-1/4 aspect-square md:aspect-auto md:h-80 relative group overflow-hidden border border-black">
-           <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1000&auto=format&fit=crop" alt="Gallery Rooftop" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
+           <img src="eventphoto.png" alt="Drop Culture Fridays Rooftop" class="w-full h-full object-cover grayscale opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
               <span class="text-white font-black uppercase tracking-widest text-sm border border-white px-4 py-2">DCF NYC</span>
            </div>
          </div>
          <div class="w-1/2 md:w-1/4 aspect-square md:aspect-auto md:h-80 relative group overflow-hidden border border-black">
-           <img src="https://images.unsplash.com/photo-1470229722913-7c090be5c520?q=80&w=1000&auto=format&fit=crop" alt="Gallery DJ" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
+           <img src="events1.png" alt="Line outside Culture House" class="w-full h-full object-cover grayscale opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
               <span class="text-white font-black uppercase tracking-widest text-sm border border-white px-4 py-2">DCF NYC</span>
            </div>
          </div>
          <div class="w-1/2 md:w-1/4 aspect-square md:aspect-auto md:h-80 relative group overflow-hidden border border-black">
-           <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=1000&auto=format&fit=crop" alt="Gallery Party" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
+           <img src="behind-the-scenes.png" alt="Behind the scenes" class="w-full h-full object-cover grayscale opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
               <span class="text-white font-black uppercase tracking-widest text-sm border border-white px-4 py-2">DCF NYC</span>
            </div>
          </div>
          <div class="w-1/2 md:w-1/4 aspect-square md:aspect-auto md:h-80 relative group overflow-hidden border border-black">
-           <img src="https://images.unsplash.com/photo-1551818255-e6e10975bc17?q=80&w=1000&auto=format&fit=crop" alt="Gallery Creator" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
+           <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1000&auto=format&fit=crop" alt="Crowd" class="w-full h-full object-cover grayscale opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
               <span class="text-white font-black uppercase tracking-widest text-sm border border-white px-4 py-2">DCF NYC</span>
            </div>
