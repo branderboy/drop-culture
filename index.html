@@ -449,14 +449,22 @@
 
         <div class="w-full md:w-1/2 grid grid-cols-2 gap-4 relative z-10">
           <div class="col-span-2 fade-in" style="transition-delay: 0.2s;">
-            <div class="aspect-video bg-gray-900 overflow-hidden relative group border border-white/10">
-              <img src="https://images.unsplash.com/photo-1540039155732-d674d5e3789b?q=80&w=2000&auto=format&fit=crop" alt="Live Event" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 grayscale hover:grayscale-0" />
+            <button type="button" class="block w-full aspect-video bg-gray-900 overflow-hidden relative group border border-white/10 cursor-pointer">
+              <img src="eventphoto.png" alt="Drop Culture Fridays Live at The Culture House NYC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/40"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-16 h-16 bg-white/10 backdrop-blur border border-white/20 rounded-full flex items-center justify-center text-white shadow-lg">
-                  <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 ml-1"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                </div>
+                <span class="relative flex items-center justify-center">
+                  <span class="absolute inline-flex h-24 w-24 md:h-32 md:w-32 rounded-full bg-[#C28B1E] opacity-30 animate-ping"></span>
+                  <span class="relative inline-flex h-20 w-20 md:h-24 md:w-24 rounded-full bg-[#C28B1E] items-center justify-center shadow-[0_0_40px_rgba(194,139,30,0.6)] group-hover:scale-110 transition-transform">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 md:w-10 md:h-10 text-black ml-1"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </span>
+                </span>
               </div>
-            </div>
+              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <span class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-white bg-black/50 backdrop-blur px-3 py-1.5 border border-white/10">▶ Watch The Room</span>
+                <span class="text-[10px] md:text-xs font-mono text-white/80 bg-black/50 backdrop-blur px-2 py-1.5">02:14</span>
+              </div>
+            </button>
           </div>
           <div class="fade-in" style="transition-delay: 0.3s;">
             <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1000&auto=format&fit=crop" alt="Crowd" class="w-full aspect-square object-cover grayscale opacity-70 border border-white/10" />
