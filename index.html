@@ -450,8 +450,9 @@
         <div class="w-full md:w-1/2 grid grid-cols-2 gap-4 relative z-10">
           <div class="col-span-2 fade-in" style="transition-delay: 0.2s;">
             <button type="button" class="block w-full aspect-video bg-gray-900 overflow-hidden relative group border border-white/10 cursor-pointer">
-              <img src="eventphoto.png" alt="Drop Culture Fridays Live at The Culture House NYC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/40"></div>
+              <img src="eventphoto.png" alt="Drop Culture Fridays Live at The Culture House NYC" class="w-full h-full object-cover contrast-110 saturate-75 group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-[#C28B1E]/10 mix-blend-multiply"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
                 <span class="relative flex items-center justify-center">
                   <span class="absolute inline-flex h-24 w-24 md:h-32 md:w-32 rounded-full bg-[#C28B1E] opacity-30 animate-ping"></span>
@@ -460,17 +461,21 @@
                   </span>
                 </span>
               </div>
-              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                <span class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-white bg-black/50 backdrop-blur px-3 py-1.5 border border-white/10">▶ Watch The Room</span>
-                <span class="text-[10px] md:text-xs font-mono text-white/80 bg-black/50 backdrop-blur px-2 py-1.5">02:14</span>
+              <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
+                <span class="text-xs md:text-sm font-black uppercase tracking-wide text-white bg-black/60 backdrop-blur px-4 py-2 border border-white/10 max-w-[80%]">Find Out Why This Event is so Special!</span>
+                <span class="text-[10px] md:text-xs font-mono text-white/80 bg-black/50 backdrop-blur px-2 py-1.5 shrink-0">02:14</span>
               </div>
             </button>
           </div>
-          <div class="fade-in" style="transition-delay: 0.3s;">
-            <img src="events1.png" alt="Line outside Culture House NYC" class="w-full aspect-square object-cover border border-white/10" />
+          <div class="fade-in relative overflow-hidden border border-white/10" style="transition-delay: 0.3s;">
+            <img src="events1.png" alt="Line outside Culture House NYC" class="w-full aspect-square object-cover contrast-110 saturate-75" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-[#C28B1E]/10 mix-blend-multiply pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
           </div>
-          <div class="fade-in" style="transition-delay: 0.4s;">
-            <img src="behind-the-scenes.png" alt="Behind the scenes at Drop Culture Fridays" class="w-full aspect-square object-cover border border-white/10" />
+          <div class="fade-in relative overflow-hidden border border-white/10" style="transition-delay: 0.4s;">
+            <img src="behind-the-scenes.png" alt="Behind the scenes at Drop Culture Fridays" class="w-full aspect-square object-cover contrast-110 saturate-75" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-[#C28B1E]/10 mix-blend-multiply pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
           </div>
         </div>
       </div>
@@ -479,11 +484,11 @@
     <!-- ==================== FORMS ==================== -->
     <section class="py-24 md:py-32 px-6 bg-[#F9F9F6]">
       <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24">
-          
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-stretch">
+
           <!-- Apply To Drop Form -->
-          <div class="fade-in">
-            <div class="bg-white p-8 md:p-12 border border-gray-200 shadow-xl relative">
+          <div class="fade-in h-full">
+            <div class="bg-white p-8 md:p-12 border border-gray-200 shadow-xl relative h-full flex flex-col">
               <div class="absolute top-0 right-0 bg-black text-white text-xs font-bold uppercase tracking-widest px-4 py-2">Creator</div>
               <h2 class="text-3xl font-black uppercase tracking-tighter mb-2">Apply To Drop</h2>
               <p class="text-gray-500 font-medium mb-6">Only 10 drops selected weekly.</p>
@@ -497,7 +502,7 @@
                 <p class="text-xs text-gray-600 font-medium mt-2 italic">Our curators are buried in demos, decks, and unfinished tracks. Make yours impossible to scroll past.</p>
               </div>
 
-              <form class="space-y-6">
+              <form class="space-y-6 flex-1 flex flex-col">
                 <div class="grid grid-cols-2 gap-6">
                   <div class="space-y-1">
                     <label class="text-xs font-bold uppercase tracking-wider text-gray-400">Name / Alias</label>
@@ -547,7 +552,7 @@
                   </div>
                 </label>
 
-                <button type="button" class="w-full bg-black text-white font-bold uppercase tracking-widest py-4 mt-8 hover:bg-[#C28B1E] transition-colors">
+                <button type="button" class="w-full bg-black text-white font-bold uppercase tracking-widest py-4 mt-auto hover:bg-[#C28B1E] transition-colors">
                   Submit Application
                 </button>
 
@@ -571,8 +576,8 @@
           </div>
 
           <!-- Request Access Form -->
-          <div class="fade-in" style="transition-delay: 0.2s;">
-            <div class="bg-white p-8 md:p-12 border border-gray-200 shadow-xl relative">
+          <div class="fade-in h-full" style="transition-delay: 0.2s;">
+            <div class="bg-white p-8 md:p-12 border border-gray-200 shadow-xl relative h-full flex flex-col">
               <div class="absolute top-0 right-0 bg-[#C28B1E] text-black text-xs font-bold uppercase tracking-widest px-4 py-2">Attendee / Contributor</div>
               <h2 class="text-3xl font-black uppercase tracking-tighter mb-2">Get In The Room</h2>
               <p class="text-gray-500 font-medium mb-8">Capacity is limited. Access is curated weekly.</p>
@@ -610,7 +615,7 @@
                 <p class="text-[11px] uppercase tracking-widest text-gray-500 font-bold mt-1">Requests this week · 80 seats · Waitlist active</p>
               </div>
 
-              <form class="space-y-6">
+              <form class="space-y-6 flex-1 flex flex-col">
                 <div class="space-y-1">
                   <label class="text-xs font-bold uppercase tracking-wider text-gray-400">Full Name</label>
                   <input type="text" class="w-full border-b border-gray-300 py-2 bg-transparent focus:outline-none focus:border-black transition-colors" />
@@ -652,7 +657,7 @@
                   </div>
                 </label>
 
-                <button type="button" class="w-full bg-[#C28B1E] text-black font-bold uppercase tracking-widest py-4 mt-8 hover:bg-black hover:text-white transition-colors">
+                <button type="button" class="w-full bg-[#C28B1E] text-black font-bold uppercase tracking-widest py-4 mt-auto hover:bg-black hover:text-white transition-colors">
                   Request Access
                 </button>
 
