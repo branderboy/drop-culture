@@ -654,9 +654,9 @@
           <!-- Request Access Form -->
           <div id="rsvp" class="fade-in h-full scroll-mt-24" style="transition-delay: 0.2s;">
             <div class="bg-white p-8 md:p-12 border border-gray-200 shadow-xl relative h-full flex flex-col">
-              <div class="absolute top-0 right-0 bg-[#C28B1E] text-black text-xs font-bold uppercase tracking-widest px-4 py-2">Attendee / Contributor</div>
+              <div class="absolute top-0 right-0 bg-[#C28B1E] text-black text-xs font-bold uppercase tracking-widest px-4 py-2">Request Access</div>
               <h2 class="text-3xl font-black uppercase tracking-tighter mb-1">Get In The Room</h2>
-              <p class="text-[#C28B1E] font-bold uppercase tracking-widest text-sm mb-8">Get Tickets</p>
+              <p class="text-[#C28B1E] font-bold uppercase tracking-widest text-sm mb-8">Three Doors, One Room</p>
 
               <!-- Event Details + Add to Calendar -->
               <div class="border border-gray-200 bg-gray-50 p-5 mb-6">
@@ -684,7 +684,7 @@
                 </div>
               </div>
 
-              <!-- Demand (Attendees) -->
+              <!-- Demand -->
               <div class="mb-6 border-l-2 border-[#C28B1E] pl-4 py-1">
                 <div class="text-2xl md:text-3xl font-black text-black leading-none">
                   <span id="rsvp-count">312</span><span class="text-gray-300">/80</span>
@@ -692,51 +692,51 @@
                 <p class="text-xs md:text-sm uppercase tracking-widest text-gray-600 font-black mt-2">Requests this week · 80 seats · Waitlist active</p>
               </div>
 
-              <form class="space-y-6 flex-1 flex flex-col">
+              <!-- STEP 1: Who are you? -->
+              <div id="rsvp-step1" class="flex-1 flex flex-col space-y-5">
+                <div>
+                  <p class="text-[10px] font-black uppercase tracking-[0.3em] text-[#C28B1E] mb-2">Step 1</p>
+                  <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tight text-black leading-tight">Tell Us A Little About Yourself.</h3>
+                  <p class="text-sm text-gray-600 font-semibold mt-2">Your answer decides your door.</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <button type="button" data-tier="influencer" data-identity="Creator" class="rsvp-chip text-sm font-bold uppercase tracking-wider px-4 py-3 border-2 border-gray-300 text-gray-700 hover:border-black hover:text-black transition-colors">Creator</button>
+                  <button type="button" data-tier="influencer" data-identity="DJ" class="rsvp-chip text-sm font-bold uppercase tracking-wider px-4 py-3 border-2 border-gray-300 text-gray-700 hover:border-black hover:text-black transition-colors">DJ</button>
+                  <button type="button" data-tier="media" data-identity="Media" class="rsvp-chip text-sm font-bold uppercase tracking-wider px-4 py-3 border-2 border-gray-300 text-gray-700 hover:border-black hover:text-black transition-colors">Media</button>
+                  <button type="button" data-tier="influencer" data-identity="Tastemaker" class="rsvp-chip text-sm font-bold uppercase tracking-wider px-4 py-3 border-2 border-gray-300 text-gray-700 hover:border-black hover:text-black transition-colors">Tastemaker</button>
+                  <button type="button" data-tier="attendee" data-identity="Local" class="rsvp-chip text-sm font-bold uppercase tracking-wider px-4 py-3 border-2 border-gray-300 text-gray-700 hover:border-black hover:text-black transition-colors">Local</button>
+                  <button type="button" data-tier="attendee" data-identity="Visiting" class="rsvp-chip text-sm font-bold uppercase tracking-wider px-4 py-3 border-2 border-gray-300 text-gray-700 hover:border-black hover:text-black transition-colors">Visiting</button>
+                </div>
+              </div>
+
+              <!-- STEP 2: Contact info (hidden until identity picked) -->
+              <form id="rsvp-step2" class="hidden space-y-6 flex-1 flex-col">
+                <div class="flex items-center justify-between gap-3 pb-3 border-b border-gray-200">
+                  <button type="button" id="rsvp-back" class="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-black transition-colors">← Back</button>
+                  <p class="text-xs font-black uppercase tracking-widest text-black">Selected: <span id="rsvp-identity-label" class="text-[#C28B1E]">—</span></p>
+                </div>
+
                 <div class="space-y-1">
                   <label class="text-sm font-black uppercase tracking-wider text-gray-500">Full Name</label>
-                  <input type="text" class="w-full border-b border-gray-300 py-3 bg-transparent text-base font-semibold focus:outline-none focus:border-black transition-colors" />
+                  <input type="text" name="name" class="w-full border-b border-gray-300 py-3 bg-transparent text-base font-semibold focus:outline-none focus:border-black transition-colors" />
                 </div>
 
                 <div class="space-y-1">
                   <label class="text-sm font-black uppercase tracking-wider text-gray-500">Email Address</label>
-                  <input type="email" class="w-full border-b border-gray-300 py-3 bg-transparent text-base font-semibold focus:outline-none focus:border-black transition-colors" />
+                  <input type="email" name="email" class="w-full border-b border-gray-300 py-3 bg-transparent text-base font-semibold focus:outline-none focus:border-black transition-colors" />
                 </div>
 
                 <div class="space-y-1">
                   <label class="text-sm font-black uppercase tracking-wider text-gray-500">Instagram (Required)</label>
-                  <input type="text" class="w-full border-b border-gray-300 py-3 bg-transparent text-base font-semibold focus:outline-none focus:border-black transition-colors" />
+                  <input type="text" name="instagram" class="w-full border-b border-gray-300 py-3 bg-transparent text-base font-semibold focus:outline-none focus:border-black transition-colors" />
                 </div>
 
-                <div class="space-y-4 pt-4">
-                  <label class="text-xs font-bold uppercase tracking-wider text-gray-400 block">Are you local or visiting?</label>
-                  <div class="flex gap-4">
-                    <label class="flex items-center gap-2 cursor-pointer">
-                      <input type="radio" name="location" class="accent-[#C28B1E] w-4 h-4" />
-                      <span class="text-base font-bold text-gray-800">NYC Local</span>
-                    </label>
-                    <label class="flex items-center gap-2 cursor-pointer">
-                      <input type="radio" name="location" class="accent-[#C28B1E] w-4 h-4" />
-                      <span class="text-base font-bold text-gray-800">Visiting</span>
-                    </label>
-                  </div>
-                </div>
-
-                <!-- Jump The Line (Attendees) -->
-                <label class="flex items-start gap-3 pt-2 cursor-pointer group">
-                  <input type="checkbox" class="mt-1 w-4 h-4 accent-[#C28B1E]" />
-                  <div class="flex-1">
-                    <div class="flex items-center justify-between flex-wrap gap-2">
-                      <span class="text-sm font-black uppercase tracking-wide text-black group-hover:text-[#C28B1E] transition-colors">Jump The Line · Confirmed Spot</span>
-                      <span class="text-sm font-black text-[#C28B1E]">+$35</span>
-                    </div>
-                    <p class="text-xs text-gray-500 font-medium mt-1">Skip the waitlist. Guaranteed entry + early door access.</p>
-                  </div>
-                </label>
-
-                <button type="button" class="w-full bg-[#C28B1E] text-black font-bold uppercase tracking-widest py-4 mt-auto hover:bg-black hover:text-white transition-colors">
-                  Get Tickets
+                <button type="button" id="rsvp-submit" class="w-full bg-[#C28B1E] text-black font-bold uppercase tracking-widest py-4 mt-auto hover:bg-black hover:text-white transition-colors">
+                  Request Approval
                 </button>
+                <p class="text-[11px] uppercase tracking-widest text-gray-500 font-bold text-center">
+                  Approved guests get an email with door details + payment link.
+                </p>
 
                 <!-- Share -->
                 <div class="pt-6 border-t border-gray-100 flex items-center justify-between flex-wrap gap-3">
@@ -754,6 +754,35 @@
                   </div>
                 </div>
               </form>
+
+              <!-- STEP 3: Approval Status (hidden until submit) -->
+              <div id="rsvp-status" class="hidden flex-1 flex-col items-center justify-center text-center py-8">
+                <div class="w-14 h-14 rounded-full bg-[#C28B1E] flex items-center justify-center mb-5 shadow-[0_0_30px_rgba(194,139,30,0.4)]">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" class="w-6 h-6"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <p class="text-[#C28B1E] font-black uppercase tracking-[0.3em] text-xs mb-2">Application Received</p>
+                <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-3">Under Review.</h3>
+                <p class="text-gray-600 font-semibold max-w-xs mb-8">
+                  Your <span class="font-black text-black" id="status-tier">Community</span> request is in the queue. We'll email you with details, your price, and a payment link.
+                </p>
+
+                <div class="w-full max-w-sm space-y-4">
+                  <div class="border border-gray-200 bg-gray-50 p-4 flex items-center justify-between">
+                    <div class="text-left">
+                      <p class="text-[10px] uppercase tracking-widest text-gray-500 font-black">Queue Position</p>
+                      <p class="text-2xl font-black text-black tabular-nums">#<span id="status-position">--</span></p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-[10px] uppercase tracking-widest text-gray-500 font-black">Next Batch</p>
+                      <p class="text-sm font-black text-black">Wednesday 8 PM</p>
+                    </div>
+                  </div>
+                  <button type="button" id="rsvp-reset" class="w-full text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-black transition-colors pt-2">
+                    ← Edit my application
+                  </button>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -949,6 +978,73 @@
     }
     tickCount('apply-count', 147);
     tickCount('rsvp-count', 312);
+
+    // 8. RSVP step flow: Identity -> Contact -> Approval status
+    (function () {
+      const step1 = document.getElementById('rsvp-step1');
+      const step2 = document.getElementById('rsvp-step2');
+      const status = document.getElementById('rsvp-status');
+      if (!step1 || !step2 || !status) return;
+
+      const chips = document.querySelectorAll('.rsvp-chip');
+      const identityLabel = document.getElementById('rsvp-identity-label');
+      const statusTier = document.getElementById('status-tier');
+      const statusPosition = document.getElementById('status-position');
+      const backBtn = document.getElementById('rsvp-back');
+      const submitBtn = document.getElementById('rsvp-submit');
+      const resetBtn = document.getElementById('rsvp-reset');
+
+      const TIER_LABEL = { media: 'Media', influencer: 'Influencer', attendee: 'Community' };
+      const state = { tier: 'attendee', identity: 'Local' };
+
+      function show(el) { el.classList.remove('hidden'); el.classList.add('flex'); }
+      function hide(el) { el.classList.add('hidden'); el.classList.remove('flex'); }
+
+      function goTo(stepEl) {
+        [step1, step2, status].forEach(hide);
+        show(stepEl);
+      }
+
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => c.classList.remove('bg-black', 'border-black', 'text-white'));
+          chip.classList.add('bg-black', 'border-black', 'text-white');
+          state.tier = chip.dataset.tier;
+          state.identity = chip.dataset.identity;
+          if (identityLabel) identityLabel.textContent = state.identity;
+          setTimeout(() => goTo(step2), 180);
+        });
+      });
+
+      if (backBtn) backBtn.addEventListener('click', () => goTo(step1));
+
+      if (submitBtn) submitBtn.addEventListener('click', () => {
+        const form = step2;
+        const name = form.querySelector('input[name="name"]').value.trim();
+        const email = form.querySelector('input[name="email"]').value.trim();
+        const ig = form.querySelector('input[name="instagram"]').value.trim();
+        if (!name || !email || !ig) {
+          submitBtn.classList.add('bg-red-500', 'text-white');
+          submitBtn.textContent = 'Fill in all fields';
+          setTimeout(() => {
+            submitBtn.classList.remove('bg-red-500', 'text-white');
+            submitBtn.textContent = 'Request Approval';
+          }, 1800);
+          return;
+        }
+        if (statusTier) statusTier.textContent = TIER_LABEL[state.tier] || 'Community';
+        if (statusPosition) statusPosition.textContent = String(200 + Math.floor(Math.random() * 80));
+        try {
+          localStorage.setItem('dcf-rsvp', JSON.stringify({ ...state, name, email, ig, at: Date.now() }));
+        } catch (e) {}
+        goTo(status);
+      });
+
+      if (resetBtn) resetBtn.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('bg-black', 'border-black', 'text-white'));
+        goTo(step1);
+      });
+    })();
 
     // 8. Share - Copy link
     document.querySelectorAll('[data-share-copy]').forEach(btn => {
