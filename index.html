@@ -510,9 +510,12 @@
             </ul>
 
             <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <a href="#rsvp" class="bg-[#C28B1E] text-black font-bold uppercase tracking-widest px-8 py-4 flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-all shadow-lg group">
-                Add To Your Itinerary · Request Tickets
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-[18px] h-[18px] transform group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <a id="add-to-itinerary" href="#" target="_blank" rel="noopener" class="bg-[#C28B1E] text-black font-bold uppercase tracking-widest px-8 py-4 flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-all shadow-lg group">
+                Add To Your Itinerary
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-[18px] h-[18px] transform group-hover:translate-x-1 transition-transform"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </a>
+              <a href="#rsvp" class="text-sm font-bold uppercase tracking-widest text-white/80 border-b border-white/40 hover:text-[#C28B1E] hover:border-[#C28B1E] transition-colors pb-0.5">
+                Request Tickets →
               </a>
             </div>
           </div>
@@ -929,21 +932,21 @@
     }
 
     // 6. Add to Calendar (Google Calendar template URL)
-    const addCal = document.getElementById('add-to-calendar');
-    if (addCal) {
-      const start = nextFridayDoors();
-      const end = new Date(start);
-      end.setHours(23, 59, 0, 0);
-      const fmt = d => d.toISOString().replace(/[-:]|\.\d{3}/g, '');
-      const params = new URLSearchParams({
-        action: 'TEMPLATE',
-        text: 'Drop Culture Fridays · NYC',
-        dates: `${fmt(start)}/${fmt(end)}`,
-        details: 'Doors 6PM · Drops 7PM. 10 Drops. The Community Decides.',
-        location: 'Culture House NYC'
-      });
-      addCal.href = `https://calendar.google.com/calendar/render?${params.toString()}`;
-    }
+    const start = nextFridayDoors();
+    const end = new Date(start);
+    end.setHours(23, 59, 0, 0);
+    const fmt = d => d.toISOString().replace(/[-:]|\.\d{3}/g, '');
+    const calParams = new URLSearchParams({
+      action: 'TEMPLATE',
+      text: 'Drop Culture Fridays · NYC',
+      dates: `${fmt(start)}/${fmt(end)}`,
+      details: 'Doors 6PM · Drops 7PM. 10 Drops. The Community Decides.',
+      location: 'Culture House NYC'
+    });
+    const calUrl = `https://calendar.google.com/calendar/render?${calParams.toString()}`;
+    document.querySelectorAll('#add-to-calendar, #add-to-itinerary').forEach(el => {
+      el.href = calUrl;
+    });
 
     // 7. Slowly tick up the demand counters
     function tickCount(id, base) {
