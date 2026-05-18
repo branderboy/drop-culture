@@ -237,39 +237,67 @@
     </div>
 
     <!-- ==================== WHAT IS SECTION ==================== -->
-    <section class="pt-12 md:pt-16 pb-14 md:pb-16 bg-[#111] text-white overflow-hidden">
-      <div class="grid grid-cols-1 md:grid-cols-2 items-start md:gap-0">
-        <div class="fade-in px-6 md:pl-12 md:pr-0 md:ml-auto md:max-w-xl">
-          <p class="text-[#C28B1E] font-bold tracking-[0.2em] uppercase text-sm mb-4 flex items-center gap-3">
-            <span class="w-8 h-[2px] bg-[#C28B1E]"></span> Who It's For
-          </p>
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter leading-[1.05] mb-8 text-left">
-            For Creators, Tastemakers <span class="text-gray-500">&amp; People Who Actually Enjoy Life.</span>
-          </h2>
-          <div class="space-y-5 text-left">
+    <section class="pt-12 md:pt-16 pb-14 md:pb-16 px-6 md:px-12 bg-[#111] text-white overflow-hidden">
+      <div class="max-w-7xl mx-auto">
+
+        <!-- Top: Festivities detail -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-10 md:mb-14">
+          <div class="fade-in">
+            <p class="text-[#C28B1E] font-bold tracking-[0.2em] uppercase text-sm mb-4 flex items-center gap-3">
+              <span class="w-8 h-[2px] bg-[#C28B1E]"></span> The Night
+            </p>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter leading-[1.05] mb-6">
+              A Rooftop. A Room. <span class="text-[#C28B1E]">A Real Audience.</span>
+            </h2>
+            <p class="text-base md:text-lg font-semibold text-gray-300 leading-relaxed mb-4">
+              Live music on the speakers. Infused drinks and small plates. Karaoke when the room calls for it. The rooftop on one side, the indoor lounge on the other.
+            </p>
             <p class="text-base md:text-lg font-semibold text-white leading-relaxed">
-              <span class="font-black">Drop Culture Fridays</span> is where artists, DJs, entrepreneurs, creatives, locals, and tourists come together in real life, not just online.
+              And in the middle of it &mdash; <span class="text-[#C28B1E] font-black">10 unreleased drops</span> the community decides on, live.
             </p>
-            <p class="text-base md:text-lg font-semibold text-gray-300 leading-relaxed">
-              A room where people discover new music, new people, new ideas, and naturally share what they find interesting.
-            </p>
-            <p class="text-base md:text-lg font-semibold text-gray-300 leading-relaxed">
-              The right room can lead to <span class="text-white font-black">reposts, conversations, collaborations, opportunities,</span> and real attention.
-            </p>
-            <p class="text-base md:text-lg italic font-bold text-[#C28B1E] leading-relaxed pt-2">
-              Who knows who might come drop this Friday.
-            </p>
+          </div>
+
+          <div class="fade-in" style="transition-delay: 0.1s;">
+            <img
+              src="access.png"
+              alt="Drop Culture Fridays All Access Badge"
+              class="block w-full h-auto"
+              style="-webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%); mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%);"
+            />
           </div>
         </div>
 
-        <div class="fade-in">
-          <img
-            src="access.png"
-            alt="Drop Culture Fridays All Access Badge"
-            class="block w-full h-auto"
-            style="-webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%); mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%);"
-          />
+        <!-- Bottom: Dual CTA -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+
+          <!-- Creators -->
+          <a href="#apply" class="fade-in group block bg-white text-black p-6 md:p-8 border-2 border-transparent hover:border-[#C28B1E] transition-all">
+            <p class="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-[#C28B1E] mb-3">For Creators</p>
+            <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-3 leading-tight">Are You Dropping?</h3>
+            <p class="text-sm md:text-base font-semibold text-gray-600 leading-relaxed mb-6">
+              Apply to drop your music, brand, art, or product to a room that actively supports. Only 10 selected per night.
+            </p>
+            <span class="inline-flex items-center gap-2 text-sm font-black uppercase tracking-widest text-black border-b-2 border-[#C28B1E] pb-1 group-hover:gap-3 transition-all">
+              Submit Your Drop
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </span>
+          </a>
+
+          <!-- Attendees -->
+          <a href="#rsvp" class="fade-in group block bg-[#C28B1E] text-black p-6 md:p-8 border-2 border-transparent hover:border-white transition-all" style="transition-delay: 0.1s;">
+            <p class="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-black/70 mb-3">For Attendees</p>
+            <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-3 leading-tight">Want In The Room?</h3>
+            <p class="text-sm md:text-base font-semibold text-black/80 leading-relaxed mb-6">
+              Curated weekly. Approved guests get door details and a payment link the same day. Capacity is limited.
+            </p>
+            <span class="inline-flex items-center gap-2 text-sm font-black uppercase tracking-widest text-black border-b-2 border-black pb-1 group-hover:gap-3 transition-all">
+              Request Access
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </span>
+          </a>
+
         </div>
+
       </div>
     </section>
 
