@@ -128,19 +128,17 @@
       <!-- Event Details Bar -->
       <div class="relative z-20 border-b border-white/10 bg-black/40 backdrop-blur-sm px-6 md:px-12 py-5 md:py-6">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-6 text-xs md:text-sm uppercase tracking-widest font-bold">
-          <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
-            <span class="text-[#C28B1E]">Drop Culture Fridays</span>
-            <span class="hidden md:inline text-white/30">/</span>
-            <span class="text-gray-300">Doors Open 6PM</span>
+          <div class="flex flex-col gap-1">
+            <span class="text-[#C28B1E]">Fri Jun 5 · 5–8PM</span>
+            <span class="text-gray-300">Sat Jun 6 · 3–6PM</span>
           </div>
           <div class="flex items-center gap-3 text-white order-first md:order-none md:mx-auto">
             <span class="text-[10px] md:text-[11px] text-gray-400 font-bold tracking-widest">Doors In</span>
             <span id="hero-countdown" class="text-[#C28B1E] font-mono text-sm md:text-base tabular-nums">-- : -- : -- : --</span>
           </div>
-          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-gray-300 md:justify-end">
-            <span class="text-[#C28B1E]">📍 Rooftop + Indoor Lounge</span>
-            <span class="hidden md:inline text-white/30">/</span>
-            <span>New York City</span>
+          <div class="flex flex-col gap-1 text-gray-300 md:items-end md:text-right">
+            <span class="text-[#C28B1E]">The Culture House NYC</span>
+            <span>Rooftop</span>
           </div>
         </div>
       </div>
@@ -617,7 +615,7 @@
                   </div>
                   <div class="flex items-center gap-3 text-gray-600">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4 text-[#C28B1E] shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    The Culture House NYC · Rooftop + Indoor Lounge
+                    The Culture House NYC · Rooftop
                   </div>
                 </div>
                 <div class="flex items-center justify-between gap-3 mt-4 pt-4 border-t border-gray-200">
@@ -819,15 +817,17 @@
       }
     });
 
-    // 3. Next Friday 6PM helpers
+    // 3. Next event date helper - hardcoded upcoming dates
+    const EVENTS = [
+      new Date('2026-06-05T17:00:00'), // Fri Jun 5, 5PM doors
+      new Date('2026-06-06T15:00:00'), // Sat Jun 6, 3PM doors
+    ];
     function nextFridayDoors() {
       const now = new Date();
-      const target = new Date(now);
-      let days = (5 - now.getDay() + 7) % 7;
-      target.setDate(now.getDate() + days);
-      target.setHours(18, 0, 0, 0);
-      if (target <= now) target.setDate(target.getDate() + 7);
-      return target;
+      for (const d of EVENTS) {
+        if (d > now) return d;
+      }
+      return EVENTS[EVENTS.length - 1];
     }
 
     // 4. Countdown (hero bar + RSVP card)
@@ -846,11 +846,11 @@
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    // 5. Next Friday human date
+    // 5. Next event human date
     const nextDate = document.getElementById('next-friday-date');
     if (nextDate) {
       const f = nextFridayDoors();
-      nextDate.textContent = f.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+      nextDate.textContent = f.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
     }
 
     // 6. Add to Calendar (Google Calendar template URL)
