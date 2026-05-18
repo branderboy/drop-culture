@@ -867,7 +867,7 @@
     </section>
 
     <!-- ==================== FAQ ==================== -->
-    <section class="py-14 md:py-20 px-6 bg-white border-t border-gray-200">
+    <section class="relative py-14 md:py-20 px-6 bg-white border-t border-gray-200">
       <div class="max-w-3xl mx-auto">
         <div class="fade-in mb-10 md:mb-14 text-center">
           <p class="text-[#0A3B82] font-bold tracking-[0.2em] uppercase text-sm mb-4 inline-flex items-center gap-3">
@@ -962,10 +962,15 @@
 
         </div>
       </div>
+
+      <!-- Animated arrow pointing into Newsletter section -->
+      <a href="#alerts" aria-label="Jump to Get Event Alerts" class="hidden md:flex absolute left-1/2 -translate-x-1/2 -bottom-10 z-30 w-20 h-20 rounded-full bg-[#C28B1E] items-center justify-center shadow-2xl hover:scale-110 transition-transform animate-bounce" style="box-shadow: 0 0 40px rgba(194,139,30,0.6);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </a>
     </section>
 
     <!-- ==================== FOOTER CTA ==================== -->
-    <section class="py-16 md:py-20 px-6 bg-[#C28B1E] text-black text-center relative overflow-hidden">
+    <section id="alerts" class="py-16 md:py-20 px-6 bg-[#C28B1E] text-black text-center relative overflow-hidden scroll-mt-16">
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border-[40px] border-black/5 rounded-full pointer-events-none"></div>
       
       <div class="max-w-4xl mx-auto relative z-10">
